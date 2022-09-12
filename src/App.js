@@ -1,17 +1,17 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Text, Button, Alert } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import EventInput from "./components/EventInput";
 import MyButton from "./components/MyButton";
 
 function App() {
   const name = "Neo";
   return (
-    <>
-      <View style={styles.container}>
-        <MyButton title="My button" />
-        <MyButton title="My button">Children Props</MyButton>
-        <MyButton />
-      </View>
-    </>
+    <View style={styles.container}>
+      <MyButton title="My button" />
+      <MyButton title="My button">{name}</MyButton>
+      <MyButton />
+      <EventInput />
+    </View>
   );
 }
 
@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
   },
   title: { fontSize: 50 },
 });

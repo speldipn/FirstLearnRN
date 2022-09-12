@@ -2,10 +2,7 @@ import React from "react";
 import { TouchableOpacity, Text, Alert } from "react-native";
 import { PropTypes } from "prop-types";
 
-function MyButton(props) {
-  console.log(props);
-  const { title, children } = props;
-  console.log(children);
+function MyButton({ title, children }) {
   return (
     <TouchableOpacity
       style={{
